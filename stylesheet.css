@@ -55,6 +55,7 @@ flex-grow: 1;
 }
 .link {
 background-color: transparent;
+color: white ;
 display: flex;
 align-items: center;
 padding: 5px;
