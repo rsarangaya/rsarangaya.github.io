@@ -2,26 +2,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resume</title>
-<style>
-body{font-family:Arial;background:#f7f8fa;margin:0}
-.container{width:90%;max-width:900px;margin:auto;padding:40px 0}
-header{background:#fff;border-bottom:1px solid #e5e7eb;padding:15px}
-a{text-decoration:none;margin-right:20px;color:#2563eb}
-iframe{width:100%;height:800px;border:none}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Romeo Sarangaya</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background:#f7f8fa; color:#1f2937; }
+    .container { width:90%; max-width:900px; margin:auto; }
+    header { border-bottom:1px solid #e5e7eb; background:#fff; }
+    .nav { display:flex; justify-content:space-between; align-items:center; padding:15px 0; }
+    .nav a { text-decoration:none; color:#1f2937; font-weight:600; margin-left:20px; }
+    .page-section { text-align:center; padding:60px 0; }
+    .content-card { background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:24px; }
+    .page-section h1 { margin:0 0 10px; }
+    .page-section p { color:#6b7280; margin-bottom:24px; }
+    iframe { width:100%; height:900px; border:none; border-radius:8px; background:#fff; }
+    footer { text-align:center; padding:30px 0; color:#6b7280; }
+  </style>
 </head>
 <body>
-<header class="container">
-<a href="index.html">Home</a>
-<a href="projects.html">Projects</a>
-</header>
-<div class="container">
-<h1>My Resume</h1>
-<iframe src="RomeoSarangayaResume.pdf"></iframe>
-</div>
+  <header>
+    <div class="container nav">
+      <strong>Romeo Sarangaya</strong>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-section">
+      <div class="content-card">
+        <h1>My Resume</h1>
+        <p>View my professional resume below.</p>
+        <iframe src="resume.pdf" title="Romeo Sarangaya Resume"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Romeo Sarangaya</p>
+  </footer>
 </body>
 </html>
 
