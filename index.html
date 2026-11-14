@@ -1,54 +1,161 @@
-<!-- ================= index.html ================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Romeo Sarangaya | Portfolio</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; background:#f7f8fa; color:#1f2937; }
-    .container { width:90%; max-width:900px; margin:auto; }
-    header { border-bottom:1px solid #e5e7eb; background:#fff; }
-    .nav { display:flex; justify-content:space-between; align-items:center; padding:15px 0; }
-    .nav a { text-decoration:none; color:#1f2937; font-weight:600; margin-left:20px; }
-    .hero { text-align:center; padding:60px 0; }
-    .hero img { width:150px; height:150px; border-radius:50%; object-fit:cover; }
-    .hero h1 { margin:15px 0 5px; }
-    .hero h2 { color:#2563eb; margin-bottom:10px; }
-    .buttons a { display:inline-block; margin:10px; padding:10px 15px; border-radius:8px; background:#2563eb; color:white; text-decoration:none; }
-    footer { text-align:center; padding:30px 0; color:#6b7280; }
-  </style>
+  <title>Romeo Sarangaya | Technical Support Specialist</title>
+  <meta name="description" content="Romeo Sarangaya — Technical Support Specialist focused on troubleshooting, system administration and security. Side projects, games and tools." />
+  <meta property="og:title" content="Romeo Sarangaya | Portfolio" />
+  <meta property="og:description" content="Technical Support Specialist. Troubleshooting, system administration, security — plus games and tools I build on the side." />
+  <meta property="og:image" content="RomeoDP.jpg" />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <strong>Romeo Sarangaya</strong>
-      <div>
-        <a href="resume.html">Resume</a>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand" href="index.html"><span class="brand-mark">RS</span><span class="brand-name">Romeo Sarangaya</span></a>
+      <div class="nav-links">
+        <a href="index.html" aria-current="page">Home</a>
         <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
       </div>
-    </div>
+    </nav>
   </header>
 
   <main class="container">
+    <!-- Hero -->
     <section class="hero">
-      <img src="RomeoDP.jpg" alt="Profile Picture">
-      <h1>Romeo Sarangaya</h1>
-      <h2>Technical Support Specialist</h2>
-      <p>IT professional focused on troubleshooting, system administration, and improving internal operations.Hopefully move into security</p>
-      <p>I also make little side projects sometimes. Please check them out!</p>
+      <div>
+        <div class="status-pill"><span class="status-dot"></span>Working toward a career in security</div>
+        <h1>Hi, I'm <span class="gradient-text">Romeo Sarangaya</span></h1>
+        <p class="role">Technical Support Specialist</p>
+        <p class="lead">IT professional focused on troubleshooting, system administration, and improving internal operations, with the goal of moving into cybersecurity. On the side I build games, desktop tools and mobile apps.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="projects.html">
+            View my projects
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a class="btn" href="https://github.com/rsarangaya/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+            GitHub
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/romeo-sarangaya/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="avatar-wrap">
+        <img src="RomeoDP.jpg" alt="Portrait of Romeo Sarangaya" />
+      </div>
+    </section>
 
-      <div class="buttons">
-        <a href="https://github.com/rsarangaya/" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/romeo-sarangaya/" target="_blank">LinkedIn</a>
+    <!-- Stats -->
+    <section class="reveal">
+      <div class="stats">
+        <div class="stat"><strong class="gradient-text">11+</strong><span>Side projects</span></div>
+        <div class="stat"><strong class="gradient-text">9</strong><span>Playable in browser</span></div>
+        <div class="stat"><strong class="gradient-text">3</strong><span>Platforms: web, desktop, mobile</span></div>
+      </div>
+    </section>
+
+    <!-- What I do -->
+    <section class="section">
+      <div class="section-head reveal">
+        <span class="eyebrow">What I do</span>
+        <h2>Keeping systems running, and building things for fun</h2>
+        <p>My day job is solving problems for people and keeping their tech working. My free time goes into learning by building.</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="card skill-card reveal">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4 2.5-2.5Z"/></svg></div>
+          <h3>Troubleshooting</h3>
+          <p>Diagnosing hardware, software and network issues quickly and clearly for end users.</p>
+        </div>
+        <div class="card skill-card reveal">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg></div>
+          <h3>System Administration</h3>
+          <p>Managing users, devices and systems, and keeping everything patched and reliable.</p>
+        </div>
+        <div class="card skill-card reveal">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Security</h3>
+          <p>Growing my security skills, with the goal of moving into a cybersecurity role.</p>
+        </div>
+        <div class="card skill-card reveal">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></svg></div>
+          <h3>Building</h3>
+          <p>Games, desktop utilities and mobile apps in JavaScript, TypeScript and Python.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured projects -->
+    <section class="section" style="padding-top:0">
+      <div class="section-head reveal">
+        <span class="eyebrow">Featured</span>
+        <h2>Recent projects</h2>
+        <p>A few highlights. There's plenty more on the projects page.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card project-card reveal">
+          <div class="project-banner b-amber"><span>⚔️</span></div>
+          <div class="project-body">
+            <div class="project-top"><h3>Gladiator Sim</h3><span class="badge live">Playable</span></div>
+            <p class="desc">Fantasy gladiator autobattler. Build your fighter, train, buy gear, then watch a fully simulated fight play out.</p>
+            <div class="project-links">
+              <a class="primary" href="https://rsarangaya.github.io/gladiator-sim-test/" target="_blank" rel="noopener">Play ↗</a>
+              <a href="https://github.com/rsarangaya/gladiator-sim-test" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+        <article class="card project-card reveal">
+          <div class="project-banner b-teal"><span>🚏</span></div>
+          <div class="project-body">
+            <div class="project-top"><h3>Wake My Stop</h3><span class="badge priv">Android</span></div>
+            <p class="desc">A location alarm for transit riders. Pick a destination and your phone rings a few minutes before your stop.</p>
+            <div class="project-links"><a class="primary" href="projects.html#wake-my-stop">Details</a></div>
+          </div>
+        </article>
+        <article class="card project-card reveal">
+          <div class="project-banner b-blue"><span>✂️</span></div>
+          <div class="project-body">
+            <div class="project-top"><h3>Snip</h3><span class="badge dl">Windows</span></div>
+            <p class="desc">A fast screenshot tool. Press a hotkey, drag a region, and annotate it right away in a built-in editor.</p>
+            <div class="project-links">
+              <a class="primary" href="https://github.com/rsarangaya/screenshot-tool/raw/main/dist/Snip.exe">Download</a>
+              <a href="https://github.com/rsarangaya/screenshot-tool" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta reveal">
+      <h2>Let's connect</h2>
+      <p>Interested in working together or want to see my experience? Check out my resume or reach out on LinkedIn.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="resume.html">View resume</a>
+        <a class="btn" href="https://www.linkedin.com/in/romeo-sarangaya/" target="_blank" rel="noopener">Message me on LinkedIn</a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 Romeo Sarangaya</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Romeo Sarangaya</span>
+      <div class="footer-links">
+        <a href="https://github.com/rsarangaya/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/romeo-sarangaya/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="resume.html">Resume</a>
+      </div>
+    </div>
   </footer>
+  <script src="main.js"></script>
 </body>
 </html>
-
-

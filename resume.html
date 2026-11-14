@@ -1,51 +1,57 @@
-<!-- ================= resume.html ================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume | Romeo Sarangaya</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; background:#f7f8fa; color:#1f2937; }
-    .container { width:90%; max-width:900px; margin:auto; }
-    header { border-bottom:1px solid #e5e7eb; background:#fff; }
-    .nav { display:flex; justify-content:space-between; align-items:center; padding:15px 0; }
-    .nav a { text-decoration:none; color:#1f2937; font-weight:600; margin-left:20px; }
-    .page-section { text-align:center; padding:60px 0; }
-    .content-card { background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:24px; }
-    .page-section h1 { margin:0 0 10px; }
-    .page-section p { color:#6b7280; margin-bottom:24px; }
-    iframe { width:100%; height:900px; border:none; border-radius:8px; background:#fff; }
-    footer { text-align:center; padding:30px 0; color:#6b7280; }
-  </style>
+  <meta name="description" content="Resume of Romeo Sarangaya, Technical Support Specialist." />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <strong>Romeo Sarangaya</strong>
-      <div>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand" href="index.html"><span class="brand-mark">RS</span><span class="brand-name">Romeo Sarangaya</span></a>
+      <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="resume.html">Resume</a>
         <a href="projects.html">Projects</a>
+        <a href="resume.html" aria-current="page">Resume</a>
       </div>
-    </div>
+    </nav>
   </header>
 
   <main class="container">
-    <section class="page-section">
-      <div class="content-card">
-        <h1>My Resume</h1>
-        <p>View my professional resume below.</p>
-        <iframe src="RomeoSarangayaResume.pdf" title="Romeo Sarangaya Resume"></iframe>
-        
+    <section class="page-header">
+      <span class="eyebrow">Experience</span>
+      <h1>My <span class="gradient-text">Resume</span></h1>
+      <p>Technical support, system administration and IT operations. View it below or download a copy.</p>
+      <div class="resume-actions">
+        <a class="btn btn-primary" href="RomeoSarangayaResume.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+          Download PDF
+        </a>
+        <a class="btn" href="RomeoSarangayaResume.pdf" target="_blank" rel="noopener">Open in new tab ↗</a>
       </div>
     </section>
+
+    <div class="card resume-frame">
+      <iframe src="RomeoSarangayaResume.pdf" title="Romeo Sarangaya Resume"></iframe>
+    </div>
   </main>
 
-  <footer>
-    <p>© 2026 Romeo Sarangaya</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Romeo Sarangaya</span>
+      <div class="footer-links">
+        <a href="https://github.com/rsarangaya/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/romeo-sarangaya/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="index.html">Home</a>
+      </div>
+    </div>
   </footer>
+  <script src="main.js"></script>
 </body>
 </html>
-
-

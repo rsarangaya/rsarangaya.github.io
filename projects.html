@@ -1,126 +1,226 @@
-<!-- ================= projects.html ================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Romeo Sarangaya</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; background:#f7f8fa; color:#1f2937; }
-    .container { width:90%; max-width:900px; margin:auto; }
-    header { border-bottom:1px solid #e5e7eb; background:#fff; }
-    .nav { display:flex; justify-content:space-between; align-items:center; padding:15px 0; }
-    .nav a { text-decoration:none; color:#1f2937; font-weight:600; margin-left:20px; }
-    .page-section { text-align:center; padding:60px 0; }
-    .content-card { background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:24px; }
-    .page-section h1 { margin:0 0 10px; }
-    .page-section p { color:#6b7280; margin-bottom:24px; }
-    .projects-list { text-align:left; }
-    .project { background:#f9fafb; padding:20px; border:1px solid #e5e7eb; margin-bottom:15px; border-radius:10px; }
-    .project h3 { margin:0 0 8px; }
-    .project p { margin:0 0 12px; color:#6b7280; }
-    .project a {
-  display: block;
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 600;
-  margin-top: 8px;
-}
-    footer { text-align:center; padding:30px 0; color:#6b7280; }
-  </style>
+  <meta name="description" content="Games, tools and apps built by Romeo Sarangaya." />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <strong>Romeo Sarangaya</strong>
-      <div>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand" href="index.html"><span class="brand-mark">RS</span><span class="brand-name">Romeo Sarangaya</span></a>
+      <div class="nav-links">
         <a href="index.html">Home</a>
+        <a href="projects.html" aria-current="page">Projects</a>
         <a href="resume.html">Resume</a>
-        <a href="projects.html">Projects</a>
       </div>
-    </div>
+    </nav>
   </header>
 
   <main class="container">
-    <section class="page-section">
-      <div class="content-card">
-        <h1>Projects</h1>
-        <p>Some things I thought of to make :)</p>
-
-        <div class="projects-list">
-          <div class="project">
-            <h3>CYOA.C</h3>
-            <p>Create Your Own Adventure Creator</p>
-            <p>This is a text-based create your own adventure creator! Create a story with branching storylines, choices, whatever! Also WIP as a full text-based rpg creator.</p>
-            <a href="https://github.com/rsarangaya/CYOA.C">View on GitHub</a>
-            <a href=" https://rsarangaya.github.io/CYOA.C">Try Online!</a>
-          </div>
-
-          <div class="project">
-            <h3>Mattopoly</h3>
-            <p>You play as 'Matt'. A mafia boss. Your goal is to take over all the businessess by defeating rivaling mafia families. </p>
-            <a href="https://github.com/rsarangaya/Mattopoly">View on GitHub</a>
-            <a href=" https://rsarangaya.github.io/Mattopoly">Try Online!</a>
-          </div>
-          
-          <div class="project">
-          <h3>Bootleg Space Invaders</h3>
-          <p>Mini-Space invader game. The ship is a taiwan flag and alien invaders are chinese flags for no reason at all :\ </p>
-          <a href="https://github.com/rsarangaya/SpaceInvadersBootleg">View on GitHub</a>
-          <a href=" https://rsarangaya.github.io/SpaceInvadersBootleg">Try Online!</a>
-          </div>
-
-          <div class="project">
-          <h3>Kick Rocks The Game</h3>
-          <p>Want to tell someone to kick rocks but don't want to be rude? Ask them to play this game instead! Also includes pound sand and take a hike.</p>
-          <a href=" https://github.com/rsarangaya/Kick-Rocks-THE-GAME">View on GitHub</a>
-          <a href=" https://rsarangaya.github.io/Kick-Rocks-THE-GAME">Try Online!</a>
-          </div>
-
-            <div class="project">
-          <h3>Custom Notes App</h3>
-          <p>Notes App basically but it can do math for budget tracking</p>
-          <a href=" https://github.com/rsarangaya/Custom-Notes-App">View on GitHub</a>
-          <a href=" https://rsarangaya.github.io/Custom-Notes-App/">Try Online!</a>
-          </div>
-          
-            <div class="project">
-          <h3>Muay Thai Fight Game</h3>
-          <p>First person view muay thai game (WIP) mostly to test out First Person POV for combat</p>
-          <a href=" https://github.com/rsarangaya/MuayThaiTest">View on GitHub</a>
-          <a href=" https://rsarangaya.github.io/MuayThaiTest">Try Online!</a>
-          </div>
-          
-            <div class="project">
-          <h3>Roguelike Zombie Game</h3>
-          <p>Inspired by Pixel Dungeon. Player is a zombie and instead of picking up equipment, you pick up body parts! </p>
-          <a href=" https://github.com/rsarangaya/Zombietest">View on GitHub</a>
-          <a href=" https://rsarangaya.github.io/Zombietest">Try Online!</a>
-          </div>
-
-          <div class="project">
-          <h3>Roguelike Dungeon Crawler</h3>
-          <p>I really like Rougelikes leave me alone. Combines mechanics from the Muay Thai Fight Game and Roguelike Zombie Game. WIP. This will one day be a full game maybe perhaps. 
-          
-          Plans:
-          5 stages, each stage has 5 floors. 
-          Each floor gets a random theme and procedurally generated floors/enemies/loot
-          Boss Fights based on theme (Final floor of each stage)
-          Last stage is always the same and last boss always the same
-          other stuff
-          
-          </p>
-          <a href=" https://github.com/rsarangaya/HoneyHan">View on GitHub</a>
-          <a href=" https://rsarangaya.github.io/HoneyHan">Try Online!</a>
-          </div>
-
-        </div>
-      </div>
+    <section class="page-header">
+      <span class="eyebrow">Side projects</span>
+      <h1>Things I thought of to make <span class="gradient-text">:)</span></h1>
+      <p>Games, tools and apps I've built in my spare time. Most of them run right in your browser, so give them a try.</p>
     </section>
+
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter" data-filter="game" aria-pressed="false">Games</button>
+      <button class="filter" data-filter="tool" aria-pressed="false">Tools &amp; Apps</button>
+    </div>
+
+    <div class="grid grid-3">
+
+      <!-- Gladiator Sim -->
+      <article class="card project-card" data-category="game" id="gladiator">
+        <div class="project-banner b-amber"><span>⚔️</span></div>
+        <div class="project-body">
+          <div class="project-top"><h3>Gladiator Sim</h3><span class="badge live">Playable</span></div>
+          <p class="project-subtitle">Fantasy gladiator autobattler</p>
+          <p class="desc">Create a gladiator, spend stat and skill points, train, buy gear, and fight your way up a 10-rank career ladder. The fights are fully simulated with play-by-play commentary, so every win comes down to how you built your character. Includes injuries, prosthetics, infamous challengers and random events.</p>
+          <div class="tags"><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Simulation</span></div>
+          <div class="project-links">
+            <a class="primary" href="https://rsarangaya.github.io/gladiator-sim-test/" target="_blank" rel="noopener">Play online ↗</a>
+            <a href="https://github.com/rsarangaya/gladiator-sim-test" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- HoneyHan -->
+      <article class="card project-card" data-category="game" id="honeyhan">
+        <div class="project-banner b-violet"><span>🗝️</span></div>
+        <div class="project-body">
+          <div class="project-top"><h3>HoneyHan</h3><span class="badge wip">In progress</span></div>
+          <p class="project-subtitle">First-person roguelike dungeon crawler</p>
+          <p class="desc">I really like roguelikes, leave me alone. Combines mechanics from the Muay Thai Fight Game and the Roguelike Zombie Game. This will one day be a full game, maybe, perhaps. Plans:</p>
+          <ul>
+            <li>5 stages, each with 5 floors</li>
+            <li>Random theme per floor, procedurally generated layouts, enemies and loot</li>
+            <li>Themed boss fight on the final floor of each stage</li>
+            <li>The last stage and final boss are always the same</li>
+          </ul>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Procedural generation</span><span class="tag">First-person</span></div>
+          <div class="project-links">
+            <a class="primary" href="https://rsarangaya.github.io/HoneyHan" target="_blank" rel="noopener">Play online ↗</a>
+            <a href="https://github.com/rsarangaya/HoneyHan" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Wake My Stop -->
+      <article class="card project-card" data-category="tool" id="wake-my-stop">
+        <div class="project-banner b-teal"><span>🚏</span></div>
+        <div class="project-body">
+          <div class="project-top"><h3>Wake My Stop</h3><span class="badge priv">Android app</span></div>
+          <p class="project-subtitle">Location alarm for transit riders</p>
+          <p class="desc">Never miss your stop again. Pick any destination on a map, compare transit or driving routes, then start a trip. Your phone rings when you're a few minutes, a set distance, or a number of stops away, using GPS together with live ETAs. Favorites, recents, Home and Work shortcuts, and light/dark themes.</p>
+          <div class="tags"><span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">TypeScript</span><span class="tag">Google Maps</span></div>
+          <div class="project-links">
+            <span class="note">Private repo · shared as an APK</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Snip -->
+      <article class="card project-card" data-category="tool" id="snip">
+        <div class="project-banner b-blue"><span>✂️</span></div>
+        <div class="project-body">
+          <div class="project-top"><h3>Snip</h3><span class="badge dl">Windows</span></div>
+          <p class="project-subtitle">Screenshot tool</p>
+          <p class="desc">A snappy screenshot tool for Windows. Press Ctrl+Shift+S, drag a region, and the editor opens instantly with your capture already on the clipboard. Annotate with pen, highlighter, arrows, boxes and real editable text, then save or copy. Lives quietly in the system tray.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">PySide6 / Qt</span><span class="tag">Desktop</span></div>
+          <div class="project-links">
+            <a class="primary" href="https://github.com/rsarangaya/screenshot-tool/raw/main/dist/Snip.exe">Download .exe</a>
+            <a href="https://github.com/rsarangaya/screenshot-tool" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- CYOA.C -->
+      <article class="card project-card" data-category="tool" id="cyoa">
+        <div class="project-banner b-pink"><span>📖</span></div>
+        <div class="project-body">
+          <div class="project-top"><h3>CYOA.C</h3><span class="badge live">Live</span></div>
+          <p class="project-subtitle">Create Your Own Adventure Creator</p>
+          <p class="desc">A text-based create-your-own-adventure creator. Write a story with branching storylines, choices, whatever you want! Also a work in progress toward a full text-based RPG creator.</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Interactive fiction</span></div>
+          <div class="project-links">
+            <a class="primary" href="https://rsarangaya.github.io/CYOA.C" target="_blank" rel="noopener">Try online ↗</a>
+            <a href="https://github.com/rsarangaya/CYOA.C" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Mattopoly -->
+      <article class="card project-card" data-category="game" id="mattopoly">
+        <div class="project-banner b-green"><span>🎩</span></div>
+        <div class="project-body">
+          <div class="project-top"><h3>Mattopoly</h3><span class="badge live">Playable</span></div>
+          <p class="project-subtitle">Mafia board game</p>
+          <p class="desc">You play as "Matt", a mafia boss. Your goal is to take over all the businesses by defeating the rival mafia families.</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Board game</span></div>
+          <div class="project-links">
+            <a class="primary" href="https://rsarangaya.github.io/Mattopoly" target="_blank" rel="noopener">Play online ↗</a>
+            <a href="https://github.com/rsarangaya/Mattopoly" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Roguelike Zombie -->
+      <article class="card project-card" data-category="game" id="zombie">
+        <div class="project-banner b-slate"><span>🧟</span></div>
+        <div class="project-body">
+          <div class="project-top"><h3>Roguelike Zombie Game</h3><span class="badge live">Playable</span></div>
+          <p class="project-subtitle">Inspired by Pixel Dungeon</p>
+          <p class="desc">You play as a zombie, and instead of picking up equipment, you pick up body parts!</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Roguelike</span></div>
+          <div class="project-links">
+            <a class="primary" href="https://rsarangaya.github.io/Zombietest" target="_blank" rel="noopener">Play online ↗</a>
+            <a href="https://github.com/rsarangaya/Zombietest" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Muay Thai -->
+      <article class="card project-card" data-category="game" id="muay-thai">
+        <div class="project-banner b-rose"><span>🥊</span></div>
+        <div class="project-body">
+          <div class="project-top"><h3>Muay Thai Fight Game</h3><span class="badge wip">In progress</span></div>
+          <p class="project-subtitle">First-person combat prototype</p>
+          <p class="desc">A first-person Muay Thai game, mostly built to test out a first-person POV for combat.</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">First-person</span></div>
+          <div class="project-links">
+            <a class="primary" href="https://rsarangaya.github.io/MuayThaiTest" target="_blank" rel="noopener">Play online ↗</a>
+            <a href="https://github.com/rsarangaya/MuayThaiTest" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Custom Notes -->
+      <article class="card project-card" data-category="tool" id="notes">
+        <div class="project-banner b-teal"><span>📝</span></div>
+        <div class="project-body">
+          <div class="project-top"><h3>Custom Notes App</h3><span class="badge live">Live</span></div>
+          <p class="project-subtitle">Notes and checklists with math</p>
+          <p class="desc">A notes app, basically, but its checklists can do math for budget tracking.</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Productivity</span></div>
+          <div class="project-links">
+            <a class="primary" href="https://rsarangaya.github.io/Custom-Notes-App/" target="_blank" rel="noopener">Try online ↗</a>
+            <a href="https://github.com/rsarangaya/Custom-Notes-App" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Kick Rocks -->
+      <article class="card project-card" data-category="game" id="kick-rocks">
+        <div class="project-banner b-amber"><span>🪨</span></div>
+        <div class="project-body">
+          <div class="project-top"><h3>Kick Rocks: The Game</h3><span class="badge live">Playable</span></div>
+          <p class="project-subtitle">Politely tell someone to go away</p>
+          <p class="desc">Want to tell someone to kick rocks but don't want to be rude? Ask them to play this game instead! Also includes Pound Sand and Take a Hike.</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Casual</span></div>
+          <div class="project-links">
+            <a class="primary" href="https://rsarangaya.github.io/Kick-Rocks-THE-GAME" target="_blank" rel="noopener">Play online ↗</a>
+            <a href="https://github.com/rsarangaya/Kick-Rocks-THE-GAME" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Space Invaders -->
+      <article class="card project-card" data-category="game" id="space-invaders">
+        <div class="project-banner b-violet"><span>👾</span></div>
+        <div class="project-body">
+          <div class="project-top"><h3>Bootleg Space Invaders</h3><span class="badge live">Playable</span></div>
+          <p class="project-subtitle">Arcade shooter</p>
+          <p class="desc">A mini Space Invaders game. The ship is a Taiwan flag and the alien invaders are Chinese flags, for no reason at all :\</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">CMU Academy</span><span class="tag">Arcade</span></div>
+          <div class="project-links">
+            <a class="primary" href="https://rsarangaya.github.io/SpaceInvadersBootleg" target="_blank" rel="noopener">Play online ↗</a>
+            <a href="https://github.com/rsarangaya/SpaceInvadersBootleg" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
   </main>
 
-  <footer>
-    <p>© 2026 Romeo Sarangaya</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Romeo Sarangaya</span>
+      <div class="footer-links">
+        <a href="https://github.com/rsarangaya/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/romeo-sarangaya/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="resume.html">Resume</a>
+      </div>
+    </div>
   </footer>
+  <script src="main.js"></script>
 </body>
 </html>
