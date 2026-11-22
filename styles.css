@@ -199,6 +199,10 @@ main { flex: 1; }
 .project-body h3 { margin: 0; font-size: 19px; letter-spacing: -0.01em; }
 .project-subtitle { color: var(--accent-2); font-size: 14px; font-weight: 500; margin: 0 0 10px; }
 .project-body p.desc { color: var(--muted); font-size: 15px; margin: 0 0 16px; }
+.nsfw-note {
+  font-size: 13px; color: #fca5a5; margin: -6px 0 14px; padding: 8px 12px; border-radius: 8px;
+  background: rgba(239, 68, 68, .1); border: 1px solid rgba(239, 68, 68, .3);
+}
 .project-body ul { color: var(--muted); font-size: 14px; margin: -6px 0 16px; padding-left: 18px; }
 
 .badge {
