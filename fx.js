@@ -91,7 +91,7 @@
     layers.push(el);
     return el;
   }
-  function cleanup() { layers.forEach(function (el) { el.remove(); }); layers = []; busy = false; root.classList.remove('intro-pending'); }
+  function cleanup() { layers.forEach(function (el) { el.remove(); }); layers = []; busy = false; root.classList.remove('intro-pending', 'arrive-pending'); }
   window.addEventListener('pageshow', function (e) { if (e.persisted) cleanup(); });
 
   function hiDPICanvas(css) {
@@ -261,6 +261,19 @@
     return wrap;
   }
 
+  // Title card shown when a page is opened directly (refresh, back/forward, typed URL, outside link).
+  function cover(z, title) {
+    var el = layer('div', 'z-index:' + z + ';display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;');
+    el.classList.add('fx-snap', 'fx-cover');
+    el.innerHTML = '<span class="eyebrow" style="margin:0">Romeo Sarangaya</span><span class="fx-cover-title gradient-text">' + title + '</span>';
+    return el;
+  }
+  function finish(url) {
+    if (url) { go(url); return; }
+    layers.forEach(function (el) { if (el.animate) el.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 200, fill: 'forwards' }); });
+    setTimeout(cleanup, 210);
+  }
+
   function go(url) {
     store('rs-nav', '1');
     window.location.href = url;
@@ -281,10 +294,10 @@
     return [L, R].filter(function (P) { return P.length >= 3; });
   }
 
-  function sliceTo(url) {
+  function sliceTo(url, title) {
     busy = true;
     var W = innerWidth, H = innerHeight, rnd = function (a, b) { return a + Math.random() * (b - a); };
-    var ready = preview(url);
+    var ready = url ? preview(url) : Promise.resolve();
     var cuts = [
       [{ x: -50, y: H * rnd(0.15, 0.35) }, { x: W + 50, y: H * rnd(0.55, 0.8) }],
       [{ x: W * rnd(0.55, 0.75), y: -50 }, { x: W * rnd(0.2, 0.4), y: H + 50 }],
@@ -296,7 +309,7 @@
     });
 
     var els = pieces.map(function (P, i) {
-      var el = snapshot(9991 + i);
+      var el = url ? snapshot(9991 + i) : cover(9991 + i, title);
       el.style.clipPath = 'polygon(' + P.map(function (p) { return p.x.toFixed(1) + 'px ' + p.y.toFixed(1) + 'px'; }).join(',') + ')';
       var cxp = 0, cyp = 0; P.forEach(function (p) { cxp += p.x; cyp += p.y; }); cxp /= P.length; cyp /= P.length;
       // small push away from each cut line
@@ -360,16 +373,16 @@
         ], { duration: dur, delay: delay, fill: 'forwards', easing: 'cubic-bezier(.55,0,.85,.45)' });
         longest = Math.max(longest, delay + dur);
       });
-      setTimeout(function () { go(url); }, longest + 60);
+      setTimeout(function () { finish(url); }, longest + 60);
     });
   }
 
   /* ---------------- 3. Fire burn ---------------- */
-  function burnTo(url, ox, oy) {
+  function burnTo(url, ox, oy, title) {
     busy = true;
     var W = innerWidth, H = innerHeight;
-    var ready = preview(url);
-    var snap = snapshot(9991);
+    var ready = url ? preview(url) : Promise.resolve();
+    var snap = url ? snapshot(9991) : cover(9991, title);
     var fire = hiDPICanvas('z-index:9995;');
     var g = fire.g;
 
@@ -452,7 +465,7 @@
         ended = true;
         ready.then(function () {
           fire.el.style.transition = 'opacity .35s'; fire.el.style.opacity = '0';
-          setTimeout(function () { go(url); }, 380);
+          setTimeout(function () { finish(url); }, 380);
         });
       }
       if (!ended || parts.length) requestAnimationFrame(frame);
@@ -462,7 +475,7 @@
 
   /* ---------------- Link interception ---------------- */
   var busy = false;
-  function page(path) { var m = path.match(/([^\/]*)$/); return (m && m[1]) || 'index.html'; }
+  function page(path) { var m = path.match(/([^\/]*)$/); return ((m && m[1]) || 'index').replace(/\.html$/, ''); }
 
   if (!reduced) {
     document.addEventListener('click', function (e) {
@@ -473,13 +486,26 @@
       var u = new URL(a.href, location.href);
       if (u.origin !== location.origin) return;
       var to = page(u.pathname), here = page(location.pathname);
-      if (to === here) return;
-      if (to === 'projects.html') { e.preventDefault(); audio(); sliceTo(u.href); }
-      else if (to === 'resume.html') { e.preventDefault(); audio(); burnTo(u.href, e.clientX || innerWidth / 2, e.clientY || innerHeight / 2); }
+      if (to === here && u.hash && u.search === location.search) return;
+      if (to === 'projects') { e.preventDefault(); audio(); sliceTo(u.href); }
+      else if (to === 'resume') { e.preventDefault(); audio(); burnTo(u.href, e.clientX || innerWidth / 2, e.clientY || innerHeight / 2); }
     });
   }
 
-  if (root.classList.contains('intro-pending')) {
+  function arrive() {
+    var here = page(location.pathname);
+    if (here === 'projects') sliceTo(null, 'Projects');
+    else if (here === 'resume') burnTo(null, innerWidth / 2, innerHeight * 0.75, 'Resume');
+    else return false;
+    root.classList.remove('arrive-pending');
+    return true;
+  }
+  window.addEventListener('pageshow', function (e) { if (e.persisted && !reduced) arrive(); });
+
+  if (root.classList.contains('arrive-pending')) {
+    root.classList.remove('intro-pending');
+    if (reduced || !arrive()) root.classList.remove('arrive-pending');
+  } else if (root.classList.contains('intro-pending')) {
     if (reduced) root.classList.remove('intro-pending');
     else intro();
   }

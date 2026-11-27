@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <script>try{if(window.self===window.top&&!sessionStorage.getItem('rs-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('intro-pending')}catch(e){}</script>
+  <script>try{if(window.self===window.top&&!matchMedia('(prefers-reduced-motion: reduce)').matches){var c=document.documentElement.classList;if(/\/(projects|resume)(\.html)?$/.test(location.pathname)&&sessionStorage.getItem('rs-nav')!=='1')c.add('arrive-pending');else if(sessionStorage.getItem('rs-nav')!=='1'&&!sessionStorage.getItem('rs-intro'))c.add('intro-pending')}}catch(e){}</script>
 </head>
 <body>
   <header class="site-header">

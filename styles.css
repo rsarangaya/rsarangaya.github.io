@@ -279,7 +279,8 @@ main { flex: 1; }
 }
 
 /* ===== Page effects (fx.js) ===== */
-html.intro-pending body > *:not(.fx-layer) { visibility: hidden; }
+html.intro-pending body > *:not(.fx-layer),
+html.arrive-pending body > *:not(.fx-layer) { visibility: hidden; }
 html.intro-pending body { overflow: hidden; }
 body.intro-pop > *:not(.fx-layer) { animation: introPop 1s cubic-bezier(.2,.8,.2,1); }
 @keyframes introPop { from { transform: scale(1.08); filter: blur(6px) brightness(1.6); } to { transform: none; filter: none; } }
@@ -302,3 +303,4 @@ body.intro-pop > *:not(.fx-layer) { animation: introPop 1s cubic-bezier(.2,.8,.2
   font-size: 14px; color: #c7d2fe; padding: 8px 14px; border-radius: 10px;
   background: rgba(109, 139, 255, .1); border: 1px solid rgba(109, 139, 255, .3);
 }
+.fx-cover-title { font-size: clamp(48px, 11vw, 120px); font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
